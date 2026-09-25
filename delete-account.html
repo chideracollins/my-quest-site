@@ -6,6 +6,7 @@
 <title>Delete Your Account — My Quest</title>
 <meta name="description" content="Request deletion of your My Quest account and associated data." />
 <meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" href="logo.png" />
 <link rel="preload" href="Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="preload" href="Poppins-SemiBold.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="preload" href="Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin />
@@ -70,6 +71,24 @@
     max-width: 720px;
     margin: 0 auto;
     padding: 48px 24px 64px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--on-surface);
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+
+  .brand img {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    flex-shrink: 0;
   }
 
   .badge {
@@ -196,6 +215,11 @@
 </head>
 <body>
 <div class="wrap">
+
+  <a class="brand" href="./" aria-label="My Quest home">
+    <img src="logo.png" alt="" width="34" height="34" />
+    My Quest
+  </a>
 
   <span class="badge">My Quest — Account Deletion</span>
 
