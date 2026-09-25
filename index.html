@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Quest — Privacy Policy</title>
+<meta name="description" content="Privacy Policy for My Quest, a privacy-focused journaling app." />
+<link rel="preload" href="Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="Poppins-SemiBold.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin />
+<style>
+  @font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+  }
+
+  :root {
+    --primary: #B06666;
+    --on-primary: #ffffff;
+    --primary-container: #F3DCDB;
+    --on-primary-container: #4A2321;
+    --surface: #FFF8F7;
+    --surface-container: #F5EBEA;
+    --on-surface: #201B1B;
+    --on-surface-variant: #534341;
+    --outline: #857371;
+    --error: #BA1A1A;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #E7BDB6;
+      --on-primary: #442926;
+      --primary-container: #5D3F3B;
+      --on-primary-container: #F3DCDB;
+      --surface: #181211;
+      --surface-container: #251D1C;
+      --on-surface: #EDE0DE;
+      --on-surface-variant: #D8C2BE;
+      --outline: #A08C89;
+      --error: #FFB4AB;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    background: var(--surface);
+    color: var(--on-surface);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid color-mix(in srgb, var(--outline) 30%, transparent);
+  }
+
+  .header-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--on-surface);
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: var(--on-primary);
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .last-updated-chip {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    background: var(--surface-container);
+    border: 1px solid color-mix(in srgb, var(--outline) 30%, transparent);
+    border-radius: 999px;
+    padding: 6px 14px;
+    white-space: nowrap;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 24px 96px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 6vw, 36px);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin: 0 0 8px;
+  }
+
+  .lede {
+    color: var(--on-surface-variant);
+    margin: 0 0 32px;
+    font-size: 17px;
+  }
+
+  nav.toc {
+    background: var(--surface-container);
+    border: 1px solid color-mix(in srgb, var(--outline) 25%, transparent);
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin-bottom: 40px;
+  }
+  nav.toc h2 {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--on-surface);
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 20px;
+    columns: 1;
+  }
+  nav.toc li { margin: 4px 0; }
+  nav.toc a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 15px;
+  }
+  nav.toc a:hover, nav.toc a:focus-visible { text-decoration: underline; }
+
+  section {
+    background: var(--surface-container);
+    border: 1px solid color-mix(in srgb, var(--outline) 25%, transparent);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 0 0 20px;
+    scroll-margin-top: 96px;
+  }
+
+  section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0 0 12px;
+    color: var(--on-surface);
+  }
+
+  section p {
+    margin: 0 0 12px;
+    color: var(--on-surface-variant);
+    font-size: 15.5px;
+  }
+  section p:last-child { margin-bottom: 0; }
+
+  .placeholder {
+    border-left: 3px solid var(--primary);
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+    border-radius: 0 10px 10px 0;
+    padding: 10px 14px;
+    margin-top: 12px;
+    font-size: 14.5px;
+    color: var(--on-surface);
+  }
+  .placeholder strong { color: var(--primary); }
+
+  a { color: var(--primary); }
+
+  :focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    color: var(--outline);
+    font-size: 13px;
+  }
+
+  @media (min-width: 600px) {
+    nav.toc ol { columns: 2; column-gap: 32px; }
+    section { padding: 28px; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="My Quest">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      My Quest
+    </a>
+    <span class="last-updated-chip">Last updated: September 25, 2026</span>
+  </div>
+</header>
+
+<main id="top">
+  <h1>Privacy Policy</h1>
+  <p class="lede">
+    My Quest is built to keep your journal on your device. This policy
+    describes how the app handles your information based on how it actually
+    works today.
+  </p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#on-device">What stays on your device</a></li>
+      <li><a href="#account">Account and sign-in information</a></li>
+      <li><a href="#ai">Journal entries and AI processing</a></li>
+      <li><a href="#models">AI model downloads</a></li>
+      <li><a href="#diagnostics">Diagnostics and crash reporting</a></li>
+      <li><a href="#sharing">Data sharing</a></li>
+      <li><a href="#retention">Retention and deletion</a></li>
+      <li><a href="#security">App security</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="on-device">
+    <h2>What stays on your device</h2>
+    <p>
+      Your journal entries, including titles and text, are stored only on
+      your device using a local database. They are not uploaded to our
+      servers.
+    </p>
+    <p>
+      The app also keeps small amounts of data on your device to remember
+      your settings and cache app data. This stays on your device too.
+    </p>
+    <p>
+      You can delete individual journal entries from within the app.
+      Deleting an entry removes it from your device's local storage.
+    </p>
+  </section>
+
+  <section id="account">
+    <h2>Account and sign-in information</h2>
+    <p>
+      My Quest uses Firebase Authentication, a service provided by Google,
+      to create and manage your account. When you sign up, your name, email
+      address and password are processed by Firebase Authentication so you
+      can log in across devices and app updates.
+    </p>
+    <p>
+      We do not see or store your password. You may also be asked to verify
+      your email address; verification emails are sent on your behalf.
+    </p>
+    <p>
+      If you sign out, your account remains with Firebase Authentication,
+      but your journal entries stay on your device.
+    </p>
+  </section>
+
+  <section id="ai">
+    <h2>Journal entries and AI processing</h2>
+    <p>
+      The AI features that generate writing prompts and suggested journal
+      titles run on your device. Your journal text is processed by a
+      language model stored locally on your phone, not by a server we
+      control.
+    </p>
+    <p>
+      Because the AI runs locally, your journal writing is not sent
+      off-device for AI processing.
+    </p>
+  </section>
+
+  <section id="models">
+    <h2>AI model downloads</h2>
+    <p>
+      Before you can use the AI features, the app downloads an AI model to
+      your device from Hugging Face, a third-party model hosting service.
+      This download is initiated by you and does not include your journal
+      content.
+    </p>
+    <p>
+      When downloading, your device communicates directly with Hugging
+      Face. Hugging Face's own privacy policy applies to that interaction.
+    </p>
+  </section>
+
+  <section id="diagnostics">
+    <h2>Diagnostics and crash reporting</h2>
+    <p>
+      The app uses Sentry, a third-party error-tracking service, to detect
+      crashes and errors so we can fix them. Error reports may include
+      technical information such as the app version, device type,
+      operating system version, and a description of the error, along
+      with performance traces.
+    </p>
+    <p>
+      We have disabled features that would capture your screen or attach
+      personal information to error reports. We do not intend for the
+      content of your journal entries to be included in these reports.
+    </p>
+  </section>
+
+  <section id="sharing">
+    <h2>Data sharing</h2>
+    <p>
+      We do not sell your data. The app shares information with the
+      following third parties only as needed to operate: Google (Firebase
+      Authentication) for account management, Hugging Face for AI model
+      downloads, and Sentry for crash and error reporting.
+    </p>
+    <p>
+      Account sign-in and communication with these services happen over
+      encrypted (HTTPS) connections.
+    </p>
+  </section>
+
+  <section id="retention">
+    <h2>Retention and deletion</h2>
+    <p>
+      Journal entries remain on your device until you delete them or
+      uninstall the app. Uninstalling the app removes locally stored
+      journal data.
+    </p>
+    <p>
+      Your account information is held by Firebase Authentication until
+      the account is deleted. You can request deletion of your account
+      and its associated data by contacting us; we will delete it rather
+      than merely deactivate it.
+    </p>
+    <p>
+      We may retain minimal data where required for security, fraud
+      prevention, or legal compliance, and we will disclose any such
+      retention here.
+    </p>
+  </section>
+
+  <section id="security">
+    <h2>App security</h2>
+    <p>
+      The app offers an optional PIN lock screen. When enabled, the app
+      requires the PIN before it can be used.
+    </p>
+    <p>
+      Your password is never stored on your device by the app; sign-in is
+      handled by Firebase Authentication.
+    </p>
+  </section>
+
+  <section id="children">
+    <h2>Children's privacy</h2>
+    <p>
+      My Quest is rated for ages 13 and up. Depending on your country, you
+      may be considered a child under local law, and rules like COPPA (US)
+      and the GDPR (EU) may require parental consent before an account can
+      be created or personal data processed.
+    </p>
+    <p>
+      Because journal entries stay on your device, we do not receive your
+      journal content. However, creating an account does share your email
+      address with Firebase Authentication, and error reports may be
+      shared with Sentry as described above.
+    </p>
+    <p>
+      We do not knowingly allow children below the minimum digital consent
+      age in their country to create accounts without the consent their
+      local law requires. If you believe a child has created an account
+      without required consent, contact us and we will remove it.
+    </p>
+  </section>
+
+  <section id="changes">
+    <h2>Changes to this policy</h2>
+    <p>
+      We may update this policy as the app evolves. Changes will be
+      published in the app with an updated "Last updated" date at the top
+      of this page.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      If you have questions about this policy, or about how your
+      information is handled, please contact us. You can also review our
+      developer identity in the app's Google Play store listing.
+    </p>
+    <div class="placeholder">
+      <strong>Placeholder:</strong> a support contact email address needs to
+      be provided by the app owner.
+    </div>
+  </section>
+</main>
+
+<footer>
+  See also our <a href="./delete-account.html">Account Deletion page</a>.
+  This policy describes the app as currently built. It is not legal advice
+  and does not claim legal compliance.
+</footer>
+
+</body>
+</html>

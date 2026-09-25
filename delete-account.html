@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Delete Your Account — My Quest</title>
+<meta name="description" content="Request deletion of your My Quest account and associated data." />
+<meta name="robots" content="noindex" />
+<link rel="preload" href="Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="Poppins-SemiBold.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin />
+<style>
+  @font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+  }
+
+  :root {
+    --primary: #B06666;
+    --on-primary: #ffffff;
+    --primary-container: #F3DCDB;
+    --on-primary-container: #4A2321;
+    --surface: #FFF8F7;
+    --surface-container: #F5EBEA;
+    --on-surface: #201B1B;
+    --on-surface-variant: #534341;
+    --outline: #857371;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #E7BDB6;
+      --on-primary: #442926;
+      --primary-container: #5D3F3B;
+      --on-primary-container: #F3DCDB;
+      --surface: #181211;
+      --surface-container: #251D1C;
+      --on-surface: #EDE0DE;
+      --on-surface-variant: #D8C2BE;
+      --outline: #A08C89;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    background: var(--surface);
+    color: var(--on-surface);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    background: var(--surface-container);
+    border: 1px solid color-mix(in srgb, var(--outline) 30%, transparent);
+    border-radius: 999px;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 6vw, 36px);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin: 0 0 12px;
+  }
+
+  .lede {
+    color: var(--on-surface-variant);
+    font-size: 17px;
+    margin: 0 0 32px;
+  }
+
+  .card {
+    background: var(--surface-container);
+    border: 1px solid color-mix(in srgb, var(--outline) 25%, transparent);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px;
+  }
+
+  .card p {
+    margin: 0 0 12px;
+    color: var(--on-surface-variant);
+    font-size: 15.5px;
+  }
+  .card p:last-child { margin-bottom: 0; }
+
+  ol.steps {
+    margin: 0 0 0;
+    padding-left: 22px;
+    color: var(--on-surface-variant);
+  }
+  ol.steps li { margin: 8px 0; }
+
+  .cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--primary);
+    color: var(--on-primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 16px 24px;
+    border-radius: 14px;
+    margin: 24px 0 12px;
+  }
+  .cta:hover { filter: brightness(1.06); }
+
+  .email-line {
+    text-align: center;
+    font-size: 14px;
+    color: var(--on-surface-variant);
+  }
+  .email-line a {
+    color: var(--primary);
+    font-weight: 600;
+    word-break: break-all;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid color-mix(in srgb, var(--outline) 25%, transparent);
+    vertical-align: top;
+  }
+  th {
+    color: var(--on-surface);
+    font-weight: 600;
+    font-size: 13.5px;
+  }
+  td { color: var(--on-surface-variant); }
+  tr:last-child td { border-bottom: none; }
+
+  .note {
+    border-left: 3px solid var(--primary);
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    font-size: 14.5px;
+    color: var(--on-surface);
+  }
+
+  footer {
+    margin-top: 32px;
+    font-size: 13px;
+    color: var(--outline);
+  }
+  footer a { color: var(--primary); }
+
+  :focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="badge">My Quest — Account Deletion</span>
+
+  <h1>Delete your account</h1>
+  <p class="lede">
+    This page explains how to request deletion of your My Quest account and
+    the data associated with it. My Quest is a privacy-focused journaling
+    app by Quantum Intelligence Lab.
+  </p>
+
+  <div class="card">
+    <h2>How to request deletion</h2>
+    <ol class="steps">
+      <li>Tap or click the button below. It opens an email to our support
+          address with the subject and details pre-filled.</li>
+      <li>Send the email from the address you use to sign in to My Quest —
+          this is how we verify the request is yours.</li>
+      <li>We process verified deletion requests and confirm by reply email
+          once your account has been deleted.</li>
+    </ol>
+
+    <a class="cta"
+       href="mailto:qintel247@gmail.com?subject=Delete%20my%20My%20Quest%20account&body=Please%20delete%20my%20My%20Quest%20account%20and%20associated%20data.%0A%0ASign-in%20email%3A%20%0AFull%20name%20on%20the%20account%3A%20">
+      Request account deletion by email
+    </a>
+    <p class="email-line">
+      If the button doesn't work, email
+      <a href="mailto:qintel247@gmail.com">qintel247@gmail.com</a>
+      with the subject "Delete my My Quest account".
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>What is deleted, and what is kept</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Data type</th>
+          <th scope="col">What happens</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Your account (name, email, password)</td>
+          <td><strong>Deleted.</strong> Removed from Firebase
+              Authentication when your request is processed.</td>
+        </tr>
+        <tr>
+          <td>Journal entries</td>
+          <td><strong>Never stored by us.</strong> Journal entries live only
+              on your device. Delete them in the app, or uninstall the app
+              to remove all locally stored data.</td>
+        </tr>
+        <tr>
+          <td>Crash and error reports (Sentry)</td>
+          <td>Existing reports may be retained by Sentry for a limited
+              period under Sentry's own retention policy (typically 90
+              days). These reports do not contain your journal content.</td>
+        </tr>
+      </tbody>
+    </table>
+ 
+    <div class="note" style="margin-top: 16px;">
+      <strong>Verification:</strong> we can only delete an account when the
+      request comes from the account's own email address. If you no longer
+      have access to it, tell us in your email and we'll confirm another
+      way to verify your identity.
+    </div>
+  </div>
+
+  <footer>
+    See also our <a href="./">Privacy Policy</a>. This deletion process
+    reflects how the app currently works and does not constitute legal
+    advice.
+  </footer>
+
+</div>
+<script>
+  // Automatically forward visitors to a pre-filled deletion email after a
+  // short pause so the page content is still readable.
+  (function () {
+    var forwarded = sessionStorage.getItem('delete-forwarded');
+    if (forwarded) return; // don't loop back after returning from mail app
+    sessionStorage.setItem('delete-forwarded', '1');
+    setTimeout(function () {
+      window.location.href =
+        'mailto:qintel247@gmail.com?subject=Delete%20my%20My%20Quest%20account&body=Please%20delete%20my%20My%20Quest%20account%20and%20associated%20data.%0A%0ASign-in%20email%3A%20%0AFull%20name%20on%20the%20account%3A%20';
+    }, 1500);
+  })();
+</script>
+</body>
+</html>
